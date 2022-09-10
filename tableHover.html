@@ -8,14 +8,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container mt-3" >
-    <div class="p-5 bg-success text-white text-center">
-        <h1>to do list of things to do two</h1>
-        <p>legaly different from to do list of things to do too!</p>
-    </div>  
+  <div class="p-5 bg-success text-white text-center">
+    <h1>To Do list of things to do two</h1>
+    <p>legaly different from to do list of things to do too!</p>
+</div>  
+<div class="container" >
     
-    <h2>Stacked input form</h2>
-    <form action="/action_page.php">
+    <form action="/New_Item_Input.php">
+      <div class = "p-5">
       <div class="mb-3 mt-3">
         <label for="item">New Item:</label>
         <input type="text" class="form-control" id="item" placeholder="Enter new item" name="item">
@@ -24,12 +24,16 @@
         <label for="due">Due Date:</label>
         <input type="date" class="form-control" id="due" placeholder="Enter due date" name="due">
       </div>
+
+    <!--
       <div class="form-check mb-3">
         <label class="form-check-label">
           <input class="form-check-input" type="checkbox" name="checkbox"> checkbox
         </label>
       </div>
+    -->
       <button type="submit" class="btn btn-primary">Add Item</button>
+    </div>     
     </form>
 
   <table class="table table-hover">
@@ -38,6 +42,7 @@
         <th>Item Description</th>
         <th>Due date</th>
         <th>Actions</th>
+        <th>Comments</th>
       </tr>
     </thead>
     <tbody>
@@ -46,13 +51,35 @@
         <td>item 1</td>
         <td>12/25/3015</td>
         <td>
-            <div class="btn-group">
+          <!--  
+          <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="#">Complete</a>
               <a class="dropdown-item" href="#">Delete</a>
             </div>
           </div>
+        -->
+        <div class="form-check mb-3">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="comp-box"> Complete
+          </label>
+        </div>
+        <div class="form-check mb-3">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="del-box"> Delete
+          </label>
+        </div>
+    
+        </td>
+        <td>
+          <form action="/action_page.php">
+            <div>
+              <label for="comment">Comments:</label>
+              <textarea class="form-control" rows="1" id="comment" name="text"></textarea>
+            </div>
+          <button type="submit" class="btn btn-primary">Submit</button>            
+          </form>
         </td>
       </tr>
 
@@ -60,27 +87,161 @@
         <td>item 2</td>
         <td>1/1/2000</td>
         <td>
-            <div class="btn-group">
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="comp-box"> Complete
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="del-box"> Delete
+            </label>
+          </div>
+              <!-- <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
                 <div class="dropdown-menu">
                     <span class="spinner-border spinner-border-sm">
                     <a class="dropdown-item" href="#">Complete</a></span>
               <a class="dropdown-item" href="#">Delete</a>
+            </div> 
+          </div>-->
+        </td>
+        <td>
+          <form action="/action_page.php">
+            <div>
+              <label for="comment">Comments:</label>
+              <textarea class="form-control" rows="1" id="comment" name="text"></textarea>
             </div>
-          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>            
+          </form>
         </td>
       </tr>
       <tr>
         <td>item 3</td>
         <td>today</td>
         <td>
-            <div class="btn-group">
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="comp-box"> Complete
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="del-box"> Delete
+            </label>
+          </div>
+              <!-- <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
                 <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Complete</a>
               <a class="dropdown-item" href="#">Delete</a>
             </div>
           </div>
+        </td> -->
+        <td>
+          <form action="/action_page.php">
+            <div>
+              <label for="comment">Comments:</label>
+              <textarea class="form-control" rows="1" id="comment" name="text"></textarea>
+            </div>
+          <button type="submit" class="btn btn-primary">Submit</button>            
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>item 4</td>
+        <td>today</td>
+        <td>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="comp-box"> Complete
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="del-box"> Delete
+            </label>
+          </div>
+              <!-- <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Complete</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </td> -->
+        <td>
+          <form action="/action_page.php">
+            <div>
+              <label for="comment">Comments:</label>
+              <textarea class="form-control" rows="1" id="comment" name="text"></textarea>
+            </div>
+          <button type="submit" class="btn btn-primary">Submit</button>            
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>item 5</td>
+        <td>today</td>
+        <td>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="comp-box"> Complete
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="del-box"> Delete
+            </label>
+          </div>
+              <!-- <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Complete</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </td> -->
+        <td>
+          <form action="/action_page.php">
+            <div>
+              <label for="comment">Comments:</label>
+              <textarea class="form-control" rows="1" id="comment" name="text"></textarea>
+            </div>
+          <button type="submit" class="btn btn-primary">Submit</button>            
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>item 6</td>
+        <td>today</td>
+        <td>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="comp-box"> Complete
+            </label>
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="del-box"> Delete
+            </label>
+          </div>
+              <!-- <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Complete</a>
+              <a class="dropdown-item" href="#">Delete</a>
+            </div>
+          </div>
+        </td> -->
+        <td>
+          <form action="/action_page.php">
+            <div>
+              <label for="comment">Comments:</label>
+              <textarea class="form-control" rows="1" id="comment" name="text"></textarea>
+            </div>
+          <button type="submit" class="btn btn-primary">Submit</button>            
+          </form>
         </td>
       </tr>
     </tbody>
