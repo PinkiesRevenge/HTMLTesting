@@ -11,9 +11,31 @@
   <div class="p-5 bg-success text-white text-center">
     <h1>To Do list of things to do two</h1>
     <p>legaly different from to do list of things to do too!</p>
-</div>  
-<div class="container" >
-    
+</div>
+<!--Nav bar-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img_avatar1.png" alt="ToDo2" style="width:40px;" class="rounded-pill">
+      </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Other</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">To Do List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Secret</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--item list-->
+<div class="container" >   
     <form action="/New_Item_Input.php">
       <div class = "p-5">
       <div class="mb-3 mt-3">
@@ -24,18 +46,9 @@
         <label for="due">Due Date:</label>
         <input type="date" class="form-control" id="due" placeholder="Enter due date" name="due">
       </div>
-
-    <!--
-      <div class="form-check mb-3">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" name="checkbox"> checkbox
-        </label>
-      </div>
-    -->
       <button type="submit" class="btn btn-primary">Add Item</button>
     </div>     
     </form>
-
   <table class="table table-hover">
     <thead>
       <tr>
@@ -45,8 +58,8 @@
         <th>Comments</th>
       </tr>
     </thead>
-    <tbody>
 
+    <tbody>
       <tr>
         <td>item 1</td>
         <td>12/25/3015</td>
@@ -69,8 +82,7 @@
           <label class="form-check-label">
             <input class="form-check-input" type="checkbox" name="del-box"> Delete
           </label>
-        </div>
-    
+        </div>   
         </td>
         <td>
           <form action="/action_page.php">
@@ -247,6 +259,5 @@
     </tbody>
   </table>
 </div>
-
 </body>
 </html>
